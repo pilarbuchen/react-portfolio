@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
-import About from './components/About';
+import About from './components/Header';
 import Gallery from './components/Portfolio';
 
 function App() {
