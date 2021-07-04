@@ -9,11 +9,16 @@ const Portfolioitems = ({ category }) => {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
-      name: 'Grocery booth',
+      name: 'Password Generator',
+      category: 'Portfolio',
+      description: 'For this challenge, I made a password generator. When clicking the button to obtain the password, the user will find that a series of different questions will prompt. Once those questions have been answered, the password will be generated.',
+      link: "https://pilarbuchen.github.io/module-challenge3/", 
+    },
+    {
+      name: 'Team Building',
       category: 'Portfolio',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
- 
   ]);
 
   const currentPhotos = photos.filter((photo) => photo.category === category);
@@ -23,7 +28,7 @@ const Portfolioitems = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/large/${category}/${i}.jpg`)}
+            src={require(`../../assets/large/${category}/${i}.png`)}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}
