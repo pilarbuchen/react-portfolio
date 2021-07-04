@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
-import About from './components/Header';
-import Gallery from './components/Portfolio';
+import Portfoliolanding from './components/Portfoliolanding';
 
 function App() {
   const [categories] = useState([
     {
-      name: 'commercial',
+      name: 'Portfolio',
       description: 'Photos of grocery stores, food trucks, and other commercial projects',
     },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
+    { name: 'Resume', description: 'Delicious delicacies' },
+
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
     <div>
-      <Nav
+      <Nav>
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-      ></Nav>
+      </Nav>
       <main>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+      <Portfoliolanding currentCategory={currentCategory}></Portfoliolanding>
       </main>
     </div>
   );
