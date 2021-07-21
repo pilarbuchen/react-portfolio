@@ -28,7 +28,7 @@ const Portfolioitems = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/large/${category}/${i}.png`)}
+            src={require(`../../assets/large/${category}/${i}.png`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}
